@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<style>
+          #box1 {
+             height: 100px;
+            width: 100px;
+             background: green;
+             transition: background 2s ease  ;
+         }
+         #box1:hover{transform:rotate(180deg) scale(.5,.5);background:red;}
+
+
+
+
+
+#box2{
+           height: 100px;
+           width: 100px;
+           background: blue;
+       }
+       #box2:hover{
+           transform: rotate(180deg) scale(.5, .5);
+           background: red;
+           transition: background 2s ease, transform 2s ease-in 1s;}
+
+
+ 
+     </style>
+ 
+ <body>
+ <div id="box1">BOX1</div>
+
+
+   <div id="box2">BOX2</div>
+</body>
+</html>

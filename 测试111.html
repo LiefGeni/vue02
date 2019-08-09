@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>开始</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="./lib/vue-2.4.0.js"></script>
+  <!-- 1. 安装 vue-router 路由模块 -->
+  <script src="./lib/vue-router-3.0.1.js"></script>
+  <style>
+    .router-link-active
+  {
+      color: red;
+      font-weight: 800;
+      font-style: italic;
+      font-size: 80px;
+      text-decoration: underline;
+      background-color: green;
+    }
+
+    .v-enter,
+    .v-leave-to {
+      opacity: 0;
+      transform: translateX(140px);
+    }
+
+    .v-enter-active,
+    .v-leave-active {
+      transition: all 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+	
+<router-link to="/login" tag="span">登录</router-link>
+<router-link to='/register'>注册</router-link>
+ <transition mode="out-in">
+      <router-view></router-view>
+    </transition>
+
+
+
+</div>
+
+
+
+
+
+<script >
+var login={
+	template:'<h2>男神帅吗</h2>'
+}
+var register = {
+	template:'<h2>相当帅的啊</h2>'
+}
+
+
+
+
+
+var router=new VueRouter({
+
+routes:[
+{ path:'/',redirect:'/login'},
+{path:'/login', component:login},
+{path:'/register',component:register}
+
+
+]
+
+
+
+})
+
+
+
+	var vm=new Vue({
+ 	el:"#app",
+ 	data:{},
+
+	router
+
+
+	});
+
+
+
+
+</script>
+</body>
+</html>

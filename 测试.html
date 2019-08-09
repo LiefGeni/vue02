@@ -1,0 +1,24 @@
+
+<script type="text/javascript">
+var  str='我是是是是大帅哥';
+var json={};
+for (var i=0; i<str.length;i++)
+{
+	console.log(str.charAt(i));
+	console.log(json[str.charAt(i)]);
+	console.log(!json[str.charAt(i)]);
+	if (!json[str.charAt(i)])
+	{
+
+		console.log(str.charAt(i))
+		json[str.charAt(i)]=1;
+		console.log(json[str.charAt(i)])
+	}
+	else
+	{
+		json[str.charAt(i)]++;
+		console.log(json[str.charAt(i)])
+		console.log('傻逼')
+	}
+}
+</script>
